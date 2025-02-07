@@ -1,11 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Artemis Cars</title>
+<link href="https://assets.expivi.net/options/latest/css/app.css" rel="stylesheet" />
+<script src="https://assets.expivi.net/viewer/latest/viewer.js"></script>
+<script src="https://assets.expivi.net/options/latest/js/app.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <script>
+	
+	
+
+
+    </script>
+<style type="text/css">
+
+
+body {
+	padding: 0;
+	margin:0;
+}
+#expiviContainer {
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/*align-content: stretch;*/
+	flex-wrap: wrap;
+
+	
+}
+#viewerContainer {
+    width: 65%;
+    height: 100vh;
+    float: left;
+	padding: 0;
+
+}
+#summaryContainer {
+    width: 34%;
+	padding: 0.5%;
+}
+
+#viewerContainer {
+	top: 0px;
+	position: sticky;
+	position: -webkit-sticky; /* Safari */  
+}
+
+
+
+.v-application .primary--text {
+  color: #007599 !important;
+    caret-color: #007599 !important;
+}
+.v-application--wrap {
+  min-height:unset;
+}
+
+.v-application .primary {
+  background-color: #007599 !important;
+    border-color: #007599 !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+	#expiviContainer {
+	height: 100%;
+		
+	}
+	.expivi_viewer_outer_container  {
+	position:sticky !important;
+	position: -webkit-sticky; /* Safari */  
+    top:0px;
+		z-index: 2;
+		box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+		margin-bottom: 30px;
+}
+	#viewerContainer {
+	width:100% !important;
+	height: 50vh !important;
+	z-index:2;
+	}
+	#summaryContainer {
+	width:100% !important;
+   
+	
+    }
+}
+
+
+
+</style>
 </head>
 <body>
-    
-</body>
-</html>
+<div id="expiviContainer">
+<div id="viewerContainer"></div>
+<div id="summaryContainer">
+  <div id="priceContainer"></div>
+  <div id="optionsContainer"></div>
+</div>
+</div>
+
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    var expiviInstance = new ExpiviComponent.default({
+      catalogueId: 24501,
+      viewerContainer: "#viewerContainer",
+      optionContainer: "#optionsContainer",
+      priceSelectors: "#priceContainer",
+      currency: "USD",
+      locale: "us",
+      token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTRiM2E5ZmFiYzNhNzZjMWZkNmZhMjNkODUzMDRiYzRiZDMyY2EyMTc2NGY1Y2FlZmVkZTQyNWY4MjY2YTAzMjBmZDNjNGI1M2E3MjMxYWYiLCJpYXQiOjE3MzQ0NDE3MDUuNTUyMTYyLCJuYmYiOjE3MzQ0NDE3MDUuNTUyMTY0LCJleHAiOjIwNDk5NzQ1MDUuMzQ1ODAyLCJzdWIiOiI2MzM1Iiwic2NvcGVzIjpbXX0.PH4Fy7kNe43D2CJcLh0mOpDsvQa0hklAHfCqNlZYMaJJQFjIBFDTPIY0TWpMEPB57AOE7cbpYES3aTWcVgNsjnUIl9sJXYP2oaEFRUj8TeKp88QovPmWEI7TBGwDNrp045ekFjb6HwuhQ1NIZ4EMJPJ0uuwZ-5-mFnXgplGVHXoMrCXDyvCqeVpOhOy6kA7mgz1Xk76yCTcdaByziZvSFYmsN4QDW_j2YB5aH5QMN6wrCBeAcobxrFiT6BrdaQBR5ZV-9PjXB0UjSm_qPYZ53vXwDUYx1vdADCyPNMo8ZPiv4zp6zfUpKIMCPe1pRLzJfs9AxtuhbsSn_npLeDQ32Vmj6cWJkDG7boEMxSKq-_SDcyh4kHB1lVW0FDW2dhVgBLTO7XfuyrhMW_1vR43oMB_lDkYzFND5kZwaZ5i6nhaqHPSNNP2kp-0RLjw8_idV20Re4wKDOaU5lavSzBwy_XJgrhAAC-yVaeTzfwf9k079RLG7amiT8-6NvvPmmGmg5EZLLy03QU9G_LnEaexTFJ4IU4wtQ2tABznFybIz0ihvvu6-HXNlAn1i34lSBrwMUNaTydImnfJmYxPSjBAYU6NLbHAAi9TqjXcezBHG2hP1l99iUecD2I_vcwmdvA5ZOszwaMXbDJUZ82F9fG7yLdgeM8wB-iv_sBH6OLuxAWM"
+    });
+  });
+  
+
+</script>
+</body></html>
